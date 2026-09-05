@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9fafb;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto), var(--font-noto-sans), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body.high-contrast * {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+
+body.high-contrast header, 
+body.high-contrast footer,
+body.high-contrast button {
+  border: 1px solid #ffffff !important;
+}
